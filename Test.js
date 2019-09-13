@@ -100,6 +100,7 @@ document.write(x + ',' + y + ',' + z);
 //var s = "I am working on improving my skills";
 //var s26 = s.charAt(26);
 //var lastChar = s.charAt(s.length -1);
+//var first = s.substring(0,12);
 //var first2 =  s.slice(0,12);
 //var lastWord = s.slice(-6);
 //var sIndex = s.indexOf(s);
@@ -180,3 +181,68 @@ document.write(x + ',' + y + ',' + z);
 // alert( 'Okay we support these browsers too' );
 //else
 // alert( 'We hope that this page looks ok!' );
+
+//Day 20
+//var count =0;
+//while (count < 10) 
+//{
+//  document.write('<br>');
+//  document.write(count);
+//  count ++
+//}
+
+//Day 21
+//var count =0;
+//do {
+// document.write(count);
+//}while (count++ < 10  &&  count > 1);
+
+//Day 22
+//var i=1; 
+//var j=10; 
+//var multi;
+//for(; i < 5 ; i++, j--){
+//multi = i * j;
+//document.write(i + '*' + j + '=' +  multi+"<br>");
+//}
+
+//Day 23
+//var x = 0;
+//var z = 1;
+//labelCancelLoops: while (true) {
+// document.write("multiplication Table for " + (x + 1) + "<>");
+// x += 1;
+// z = 1;
+// while (true) {
+// document.write( x + '*' + z + '=' + x * z +'<br>');
+// z += 1;
+// if (z === 11 && x === 11) {
+// break labelCancelLoops;
+// } else if (z === 11) {
+// break;
+// }
+// }
+//}
+
+
+////Day 24
+//var x = 0;
+//var z = 1;
+//document.write("multiplication Table Of even numbers <br>");
+//labelCancelLoops: while (true) {
+//  if(x%2 == 0) 
+//     document.write("multiplication Table for " + x + "<br>");
+// x += 1;
+// z = 1;
+//  if(x%2 != 0)
+//   continue labelCancelLoops;
+// while (true) {
+// document.write( x + '*' + z + '=' + x * z +'<br>');
+// z += 1;
+// if (z === 11 && x === 11) {
+// break labelCancelLoops;
+// } else if (z === 11) {
+// break;
+// }
+// }
+//}
