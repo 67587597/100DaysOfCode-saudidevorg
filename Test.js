@@ -231,7 +231,7 @@ document.write(x + ',' + y + ',' + z);
 //document.write("multiplication Table Of even numbers <br>");
 //labelCancelLoops: while (true) {
 //  if(x%2 == 0) 
-//     document.write("multiplication Table for " + x + "<br>");
+//     document.write("multiplication Table for " + (x +2)  + "<br>");
 // x += 1;
 // z = 1;
 //  if(x%2 != 0)
