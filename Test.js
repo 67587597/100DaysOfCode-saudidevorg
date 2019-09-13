@@ -96,5 +96,87 @@ document.write(x + ',' + y + ',' + z);
 //window.alert('Hello');
 //console.log('popup box is shown up');
 
+//Day 13
+//var s = "I am working on improving my skills";
+//var s26 = s.charAt(26);
+//var lastChar = s.charAt(s.length -1);
+//var first2 =  s.slice(0,12);
+//var lastWord = s.slice(-6);
+//var sIndex = s.indexOf(s);
+//var arr =[];
+//arr.push(s.split(' '));
+//var newS = s.replace('improving my skills', 'gaining new knowladge');
+//var upper = s.toUpperCase();
+////document.write(s);
+//document.write('s=' + s +  ' s26=' + s26 + '<br> lastChar=' + lastChar +  '<br> first=' + first + '<br> first2=' + first2 +  '<br> lastWord=' + lastWord +  '<br> sIndex=' + sIndex + '<br> newS=' + newS +  '<br> upper=' + upper + '<br>');
+//document.write(arr);
+//
 
+//Day 14
+// Print Fibonacci numbers from 1 to 10
+//var x, z;
+//function f(y) {
+//  if(y==0 || y==1) 
+//      z = 1;
+//  else
+//   z= f(y-1) + f(y-2);
+//  return z;
+//}
+//
+//for(x= 1; x<=10; x++)
+//  {
+//    document.write('<br>');
+//   document.write(f(x))
+//   }
+//
+////Day 15
+//var now = new Date();
+//var birthYear = 1995;
+//if(now.getFullYear() - birthYear >= 18 )
+//  {
+//  document.write('Adult');
+//  }
+//else
+//  {
+//  if(now.getFullYear() - birthYear < 18  && now.getFullYear() - birthYear > 12 )
+//    document.write('Teen');
+//    else
+//      document.write('Child');
+//  }
+//Day 16
+//var n = 4 ;
+//if (n == 1) {
+//document.write("You have 1 new message.") ;
+//}
+//else if (n == 2) {
+//document.write("You have 2 new messages.") ;
+//}
+//else if (n == 3) {
+//document.write("You have 3 new messages.");
+//}
+//else {
+//document.write("You have new messages.") ;
+//}
 
+//Day 17
+//var n = 90;
+//switch(true) {
+//case (n%2 == 0):
+// document.write(n + " is even number");
+//case (n%3 == 0):
+// document.write("<br>" + n+ " is dividable by 3");
+//  case (n%5 == 0):
+// document.write("<br>" + n+ " is dividable by 5");
+//
+//default:
+// document.write("<br>" + n+ " is a number");
+// break;
+//}
+
+//Day 18 + Day 19
+//if(browser === 'Edge')
+// alert( "You've got the Edge!" );//Day 18 + Day 19
+//if else(browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera')
+// alert( 'Okay we support these browsers too' );
+//else
+// alert( 'We hope that this page looks ok!' );
