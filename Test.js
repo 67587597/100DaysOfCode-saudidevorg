@@ -246,3 +246,38 @@ document.write(x + ',' + y + ',' + z);
 // }
 // }
 //}
+//Day 25 + Day 26
+for (var i=1; i<=5; i++)
+{
+ var x= i;
+  var z = i*i;
+  document.write('i=' + i);
+  document.write('<br>');
+  
+  labelToContinue: while(z <= 10 && z > 0) { 
+    z = z + 2; 
+    if(z%2 !== 0) {
+        // document.write('Skipped');
+        // document.write('<br>');
+        continue labelToContinue;
+      }
+    else
+      {
+        document.write('z=' +z);
+        document.write('<br>');
+      }
+     
+  }
+  lableToBreak: while(x > 0 && x <= 5) {
+    if(i >= 5)
+      {
+        document.write('It is greater than 4');
+        break lableToBreak;
+      }
+    document.write('x=' + x);
+    document.write('<br>');  
+     x = x - 1;
+   }
+    document.write('---------------------------------');
+    document.write('<br>');
+}
