@@ -302,3 +302,18 @@ document.write(x + ',' + y + ',' + z);
 //document.write(spellMyName('Sondos')); 
 
 //Day 28
+//var x=6; var z=0;
+//
+// function devid(a, b){
+//    if(a != 0 && b != 0)
+//    {
+//        var f =a/b; 
+//        document.write(f);
+//    }
+//   else if(a == 0 && b != 0 )
+//     document.write(0);
+//   else
+//     throw "not a correct expression";
+// }
+//
+// devid(x,z);
