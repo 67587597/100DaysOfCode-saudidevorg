@@ -361,3 +361,23 @@ document.write(x + ',' + y + ',' + z);
 //findFactors();
 
 //Day 30
+// Creating Objects using Decorator function
+var CourseCreator =  function(obj, name, duration, price) {
+    obj.name = name;
+    obj.duration = duration;
+    obj.price = price;
+return obj;
+}
+var arr = [];
+JavaScriptCourse = CourseCreator({}, 'JS', 3, 300);
+DataAnalysiaCourse = CourseCreator({}, 'DA', 3, 500);
+arr.push(JavaScriptCourse);
+arr.push(DataAnalysiaCourse);
+
+arr.forEach(function(val,index) { 
+    document.write('Course ' + val["name"] + ' Costs ' + val.price + '<br>');
+})
+//
+//document.write(DataAnalysiaCourse.price);
+//document.write(JavaScriptCourse.price);
+
