@@ -362,22 +362,33 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 30
 // Creating Objects using Decorator function
-var CourseCreator =  function(obj, name, duration, price) {
-    obj.name = name;
-    obj.duration = duration;
-    obj.price = price;
-return obj;
-}
-var arr = [];
-JavaScriptCourse = CourseCreator({}, 'JS', 3, 300);
-DataAnalysiaCourse = CourseCreator({}, 'DA', 3, 500);
-arr.push(JavaScriptCourse);
-arr.push(DataAnalysiaCourse);
-
-arr.forEach(function(val,index) { 
-    document.write('Course ' + val["name"] + ' Costs ' + val.price + '<br>');
-})
+//var CourseCreator =  function(obj, name, duration, price) {
+//    obj.name = name;
+//    obj.duration = duration;
+//    obj.price = price;
+//return obj;
+//}
+//var arr = [];
+//JavaScriptCourse = CourseCreator({}, 'JS', 3, 300);
+//DataAnalysiaCourse = CourseCreator({}, 'DA', 3, 500);
+//arr.push(JavaScriptCourse);
+//arr.push(DataAnalysiaCourse);
 //
-//document.write(DataAnalysiaCourse.price);
-//document.write(JavaScriptCourse.price);
+//arr.forEach(function(val,index) { 
+//    document.write('Course ' + val["name"] + ' Costs ' + val.price + '<br>');
+//})
+////
+////document.write(DataAnalysiaCourse.price);
+////document.write(JavaScriptCourse.price);
+//
+//Day 31
+var Book = function(name, pages){
+  this.name = name;
+  this.pages= pages;
+  this.MoveToPage =  function(x){
+    document.write('Current Page is ' + x)
+  }
+}
 
+var WutheringHeights = new Book('Wuthering Heights', 406);
+WutheringHeights.MoveToPage(20);
