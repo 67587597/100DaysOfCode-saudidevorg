@@ -301,14 +301,14 @@ document.write(x + ',' + y + ',' + z);
 //document.write('-------------------------<br>');
 //document.write(spellMyName('Sondos')); 
 
+
 //Day 28
-//var x=6; var z=0;
+// var x=6; var z=0;
 //
 // function devid(a, b){
 //    if(a != 0 && b != 0)
-//    {
-//        var f =a/b; 
-//        document.write(f);
+//    { 
+//        var f =a/b;    document.write(f);
 //    }
 //   else if(a == 0 && b != 0 )
 //     document.write(0);
@@ -317,3 +317,47 @@ document.write(x + ',' + y + ',' + z);
 // }
 //
 // devid(x,z);
+// devid(x,z);
+
+//Day 29
+//function findFactors() {
+//  var x, r;
+// var z=  Number(prompt('Enter a composite  number', ''));
+//  if( ((z % 2 == 0 ) || (z % 3 == 0) || (z % 5 == 0) || (z % 7 == 0)) && (z !== 2  && z !==3 && z !==5 && z !==7))
+//    x =  'Composite';
+//  else
+//    x= 'Prime'
+//  document.write('Entered number is' + x);
+//  
+//    try{
+//     y = z;
+//        document.write('<br>' + 'Entered number\'s factors:'+ '<br>')
+//     while(((z % 2 == 0 ) || (z % 3 == 0) || (z % 5 == 0) || (z % 7 == 0)))
+//        {
+//            if(z%2 == 0) {
+//                 document.write(2 + '<br>')
+//                 z = z/2; }
+//            else if(z%3 == 0) {
+//                 document.write(3 + '<br>')
+//                 z = z/3; }
+//            else if(z%5 == 0) {
+//                 document.write(5 + '<br>')
+//                 z = z/5;}
+//            else if(z%7 == 0) {
+//                 document.write(7 + '<br>')
+//                 z = z/7;}
+//        if((z % 2 != 0 ) && (z % 3 != 0) && (z % 5 != 0) && (z % 7 != 0) && z != 1)
+//            document.write(z + '<br>')
+//                
+//        
+//        }}
+//     catch(e) {
+//      document.write('error');
+//     }
+//     finally {
+//       document.write('That is it');
+//     }
+//}
+//findFactors();
+
+//Day 30
