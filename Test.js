@@ -382,13 +382,35 @@ document.write(x + ',' + y + ',' + z);
 ////document.write(JavaScriptCourse.price);
 //
 //Day 31
-var Book = function(name, pages){
-  this.name = name;
-  this.pages= pages;
-  this.MoveToPage =  function(x){
-    document.write('Current Page is ' + x)
-  }
+//var Book = function(name, pages){
+//  this.name = name;
+//  this.pages= pages;
+//  this.MoveToPage =  function(x){
+//    document.write('Current Page is ' + x)
+//  }
+//}
+//
+//var WutheringHeights = new Book('Wuthering Heights', 406);
+//WutheringHeights.MoveToPage(20);
+
+//Day 32 + Day 33
+function DevideNumbers() {
+
+var x =  Number(prompt('Enter the first number', ''));
+var z =  Number(prompt('Enter the seconed  number', ''));
+   try{
+      var y = Number(x/z);
+       if(y !=  'Infinity')
+            document.write('Result =' + y);
+       else
+           throw('Can\'t devided by 0 ')
+      }
+    catch(e) {
+     document.write(e);
+    }
+    finally {
+      document.write('<br> Try again');
+    }
 }
 
-var WutheringHeights = new Book('Wuthering Heights', 406);
-WutheringHeights.MoveToPage(20);
+DevideNumbers();
