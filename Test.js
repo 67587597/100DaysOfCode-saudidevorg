@@ -394,23 +394,40 @@ document.write(x + ',' + y + ',' + z);
 //WutheringHeights.MoveToPage(20);
 
 //Day 32 + Day 33
-function DevideNumbers() {
+//function DevideNumbers() {
+//
+//var x =  Number(prompt('Enter the first number', ''));
+//var z =  Number(prompt('Enter the seconed  number', ''));
+//   try{
+//      var y = Number(x/z);
+//       if(y !=  'Infinity')
+//            document.write('Result =' + y);
+//       else
+//           throw('Can\'t devided by 0 ')
+//      }
+//    catch(e) {
+//     document.write(e);
+//    }
+//    finally {
+//      document.write('<br> Try again');
+//    }
+//}
 
-var x =  Number(prompt('Enter the first number', ''));
-var z =  Number(prompt('Enter the seconed  number', ''));
-   try{
-      var y = Number(x/z);
-       if(y !=  'Infinity')
-            document.write('Result =' + y);
-       else
-           throw('Can\'t devided by 0 ')
-      }
-    catch(e) {
-     document.write(e);
-    }
-    finally {
-      document.write('<br> Try again');
-    }
+//Day 34
+//ES5 Function
+var name = 'general';
+printObjects = function(obj) {
+    document.write(obj.name);
 }
+//ES6 function
+const printGlobaObjects = () =>  document.write(this.name);
+
+var person = {
+  name: 'Sondos'
+}
+printGlobaObjects();
+document.write('<br>');
+printObjects(person);
+
 
 DevideNumbers();
