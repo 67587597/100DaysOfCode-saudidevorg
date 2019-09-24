@@ -414,20 +414,43 @@ document.write(x + ',' + y + ',' + z);
 //}
 
 //Day 34
-//ES5 Function
-var name = 'general';
-printObjects = function(obj) {
-    document.write(obj.name);
-}
-//ES6 function
-const printGlobaObjects = () =>  document.write(this.name);
+////ES5 Function
+//var name = 'general';
+//printObjects = function(obj) {
+//    document.write(obj.name);
+//}
+////ES6 function
+//const printGlobaObjects = () =>  document.write(this.name);
+//
+//var person = {
+//  name: 'Sondos'
+//}
+//printGlobaObjects();
+//document.write('<br>');
+//printObjects(person);
+//
+//
+//DevideNumbers();
+//Day 35
+//
+//var Person = function(name, major) {
+//  this.name = name;
+//  this.major = major;
+//}
+//
+//var sondos = new Person("Sondos", "CS");
+//document.write(sondos.major);
 
-var person = {
-  name: 'Sondos'
-}
-printGlobaObjects();
-document.write('<br>');
-printObjects(person);
+//Day 36
 
-
-DevideNumbers();
+//var Person = function(name, major, degree) {
+//  this.name = name;
+//  this.major = major;
+//  this.degree = degree;
+//}
+//
+//var sondos = new Person("Sondos", "CS", "BS");
+//document.write('<br>' + sondos.major + ' has ' + sondos.degree + ' in '+ sondos.major);
+//delete sondos.degree
+//document.write('<br>' + sondos.major + ' has ' + sondos.degree + ' in '+ sondos.major);
+//
