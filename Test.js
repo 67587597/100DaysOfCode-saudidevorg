@@ -453,4 +453,18 @@ document.write(x + ',' + y + ',' + z);
 //document.write('<br>' + sondos.major + ' has ' + sondos.degree + ' in '+ sondos.major);
 //delete sondos.degree
 //document.write('<br>' + sondos.major + ' has ' + sondos.degree + ' in '+ sondos.major);
+//Day 37
+//var Person = function(name, major, degree) {
+//  this.name = name;
+//  this.major = major;
+//  this.degree = degree;
+//}
 //
+//var sondos = new Person("Sondos", "CS", "BS");
+//
+//document.write('<br>' + sondos.major + ' has ' + sondos.degree + ' in '+ sondos.major);
+//delete sondos.degree
+//document.write('<br>' + sondos.major + ' has ' + sondos.degree + ' in '+ sondos.major + '<br>');
+//document.write("degree" in  sondos);
+//document.write('<br>');
+//document.write(Person.hasOwnProperty("degree"));
