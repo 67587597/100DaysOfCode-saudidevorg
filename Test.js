@@ -468,3 +468,28 @@ document.write(x + ',' + y + ',' + z);
 //document.write("degree" in  sondos);
 //document.write('<br>');
 //document.write(Person.hasOwnProperty("degree"));
+
+
+//Day 38
+var person = {
+ firstName: "Sondos",
+ lastName: "Alsalooli",
+ language: "EN",
+ get langGet(){ 
+  return this.language}, 
+ set langSet(value) { 
+ this.language = value; }
+};
+
+const lang = person.langSet = 'AR';
+document.getElementById('div1').innerHTML = lang;
+
+//Day 39 + Day 40
+
+
+
+
+
+
+
+
