@@ -612,7 +612,7 @@ function Product (id, price, name) {
 };
    
 p = new Product(1, 90, 'Jacket'); 
-p2 = new Product(1, 120, 'shirt');
+p2 = new Product(2, 120, 'shirt');
 
 
 Product.prototype.discount = function(prec) {
@@ -623,6 +623,17 @@ console.log(p.discount(0.2));
 console.log(p2.discount(0.3));
 console.log(p2.discount === p2.discount);
 
+//Day 43
+
+var arrOfProducts = [];
+arrOfProducts.push(p);
+arrOfProducts.push(p2);
+
+function func(value, index){
+    console.log('Product ' + value.id+ ' originally costs ' + value.price + ' but now it costs ' + value.discount(0.2))
+}
+
+arrOfProducts.forEach(func);
 
 
 
