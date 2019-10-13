@@ -604,50 +604,70 @@ document.write(x + ',' + y + ',' + z);
 //console.log(Object.prototype.isPrototypeOf(p)); //true, all objects point to Object
 
 //Day 42
-function Product (id, price, name) {
-    this.id = id;
+//function Product (id, price, name) {
+//    this.id = id;
+//    this.name = name;
+//    this.price = price;
+//
+//};
+//   
+//p = new Product(1, 90, 'Jacket'); 
+//p2 = new Product(2, 120, 'shirt');
+//
+//
+//Product.prototype.discount = function(prec) {
+//    return this.price - this.price * prec;
+//}
+//
+//console.log(p.discount(0.2));
+//console.log(p2.discount(0.3));
+//console.log(p2.discount === p2.discount);
+//
+////Day 43 + Day 44
+//
+//var arrOfProducts = [];
+//arrOfProducts.push(p);
+//arrOfProducts.push(p2);
+//
+//function func(value, index){
+//    console.log('Product ' + value.id+ ' originally costs ' + value.price + ' but now it costs ' + value.discount(0.2))
+//}
+//
+//arrOfProducts.forEach(func);
+//
+////Day 45
+//
+////Using another approach
+//for(var i =0; i< arrOfProducts.length;i++)
+//    {
+//        console.log('Product ' + arrOfProducts[i].id+ ' originally costs ' + arrOfProducts[i].price + ' but now it costs ' + arrOfProducts[i].discount(0.2))
+//    }
+
+//Day 46 + Day 47
+
+function Student(name, GPA){
     this.name = name;
-    this.price = price;
-
-};
-   
-p = new Product(1, 90, 'Jacket'); 
-p2 = new Product(2, 120, 'shirt');
-
-
-Product.prototype.discount = function(prec) {
-    return this.price - this.price * prec;
+    this.GPA = GPA;
 }
 
-console.log(p.discount(0.2));
-console.log(p2.discount(0.3));
-console.log(p2.discount === p2.discount);
+var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+var GPA = [4.8, 4.5, 5, 4, 4.9];
+var studentsList = [];
 
-//Day 43 + Day 44
-
-var arrOfProducts = [];
-arrOfProducts.push(p);
-arrOfProducts.push(p2);
-
-function func(value, index){
-    console.log('Product ' + value.id+ ' originally costs ' + value.price + ' but now it costs ' + value.discount(0.2))
-}
-
-arrOfProducts.forEach(func);
-
-//Day 45
-
-//Using another approach
-for(var i =0; i< arrOfProducts.length;i++)
-    {
-        console.log('Product ' + arrOfProducts[i].id+ ' originally costs ' + arrOfProducts[i].price + ' but now it costs ' + arrOfProducts[i].discount(0.2))
+function addStudent(value, index){
+     let st = new Student(names[index], GPA[index]);
+     studentsList.push(st);
     }
 
 
+names.forEach(addStudent);
 
 
+function showStudents(value){
+    console.log('Sudent Name: ' + value.name+ ' - GPA: ' + value.GPA )
+}
 
-
+studentsList.forEach(showStudents);
 
 
 
