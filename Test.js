@@ -597,12 +597,31 @@ document.write(x + ',' + y + ',' + z);
 //document.getElementById('SetValues1').addEventListener('click', setValues.bind(this,1));
 
 //Day 41
-function Product() {
+//function Product (id, price, name) {
+//};
+//   
+//p = new Product();
+//console.log(Object.prototype.isPrototypeOf(p)); //true, all objects point to Object
+
+//Day 42
+function Product (id, price, name) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+
 };
    
-p = new Product();
-console.log(Object.prototype.isPrototypeOf(p)); //true, all objects point to Object
+p = new Product(1, 90, 'Jacket'); 
+p2 = new Product(1, 120, 'shirt');
 
+
+Product.prototype.discount = function(prec) {
+    return this.price - this.price * prec;
+}
+
+console.log(p.discount(0.2));
+console.log(p2.discount(0.3));
+console.log(p2.discount === p2.discount);
 
 
 
