@@ -623,7 +623,7 @@ console.log(p.discount(0.2));
 console.log(p2.discount(0.3));
 console.log(p2.discount === p2.discount);
 
-//Day 43
+//Day 43 + Day 44
 
 var arrOfProducts = [];
 arrOfProducts.push(p);
@@ -634,6 +634,14 @@ function func(value, index){
 }
 
 arrOfProducts.forEach(func);
+
+//Day 45
+
+//Using another approach
+for(var i =0; i< arrOfProducts.length;i++)
+    {
+        console.log('Product ' + arrOfProducts[i].id+ ' originally costs ' + arrOfProducts[i].price + ' but now it costs ' + arrOfProducts[i].discount(0.2))
+    }
 
 
 
