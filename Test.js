@@ -487,129 +487,122 @@ document.write(x + ',' + y + ',' + z);
 //Day 39 + Day 40
 // Using setter and getter
 
-var Course = {
- Subject: "ALGORITHM",
- CoordinatorName: 'Noura',
- NOofHours: "30",
- NoofStudents: "20",
- set setSubject(val) {
-     this.Subject = val;
- },
- get getSubject() {
-    return this.Subject;
- },
- set setCoordinatorName(val) {
-     this.CoordinatorName = val;
- },
- get getCoordinatorName() {
-    return this.CoordinatorName;
- },
- set setNOofHours(val) {
-     this.NOofHours = val;
- },
- get getNOofHours() {
-    return this.NOofHours;
- }, 
- set setNoofStudents(val) {
-         this.NoofStudents = val;
- },
- get getNoofStudents() {
-    return this.NoofStudents;
- }
+//var Course = {
+// Subject: "ALGORITHM",
+// CoordinatorName: 'Noura',
+// NOofHours: "30",
+// NoofStudents: "20",
+// set setSubject(val) {
+//     this.Subject = val;
+// },
+// get getSubject() {
+//    return this.Subject;
+// },
+// set setCoordinatorName(val) {
+//     this.CoordinatorName = val;
+// },
+// get getCoordinatorName() {
+//    return this.CoordinatorName;
+// },
+// set setNOofHours(val) {
+//     this.NOofHours = val;
+// },
+// get getNOofHours() {
+//    return this.NOofHours;
+// }, 
+// set setNoofStudents(val) {
+//         this.NoofStudents = val;
+// },
+// get getNoofStudents() {
+//    return this.NoofStudents;
+// }
+//
+//};
+//
+////Using Inheritance
+//function courseClass(Subject, CoordinatorName, NOofHours, NoofStudents) {
+//    this.Subject = Subject;
+//    this.CoordinatorName = CoordinatorName;
+//    this.NOofHours = NOofHours;
+//    this.NoofStudents = NoofStudents;
+//}
+//let count = 0;
+//document.getElementById('Subject').value = Course.getSubject;
+//document.getElementById('CoordinatorName').value = Course.getCoordinatorName;
+//document.getElementById('NOofHours').value = Course.getNOofHours;
+//document.getElementById('NoofStudents').value = Course.getNoofStudents;
+//
+//function setValueOfControls(e, cor) {
+//    console.log(e);
+//    if(e == "0")
+//    {   
+//        document.getElementById('Subject').value = Course.getSubject;
+//        document.getElementById('CoordinatorName').value = Course.getCoordinatorName;
+//        document.getElementById('NOofHours').value = Course.getNOofHours;
+//        document.getElementById('NoofStudents').value = Course.getNoofStudents; 
+//        var corSubject, corCoordinatorName, corNOofHours, corNoofStudents;
+//        corSubject = cor.Subject;
+//        corCoordinatorName = cor.CoordinatorName;
+//        corNOofHours = cor.NOofHours;
+//        corNoofStudents = cor.NoofStudents;
+//        creatNewDiv(corSubject, corCoordinatorName, corNOofHours,corNoofStudents);
+//    }
+//    else {
+//         document.getElementById('Subject1').value = '';
+//        document.getElementById('CoordinatorName1').value = '';
+//        document.getElementById('NOofHours1').value = '';
+//        document.getElementById('NoofStudents1').value = '';    
+//        var corSubject, corCoordinatorName, corNOofHours, corNoofStudents;
+//        corSubject = cor.Subject;
+//        corCoordinatorName = cor.CoordinatorName;
+//        corNOofHours = cor.NOofHours;
+//        corNoofStudents = cor.NoofStudents;
+//        creatNewDiv(corSubject, corCoordinatorName, corNOofHours,corNoofStudents);
+//    }
+//}
+//
+//function creatNewDiv(corSubject, corCoordinatorName, corNOofHours,corNoofStudents) {
+// 
+//      var div = document.createElement('div');
+//        var corSubject, corCoordinatorName, corNOofHours, corNoofStudents;
+//       var divHTML = '<div class="div"><label>Subject</label> <label></label>&Subject1 </div> <div class="div"><label>Coordinator Name</label> &CoordinatorName1</div><div class="div"><label>NO of Hours</label> &NOofHours1</div><div class="div"><label>No of Students</label> &NoofStudents1</div><hr/>';
+//        divHTML = divHTML.replace("&Subject1", corSubject);
+//        divHTML = divHTML.replace("&CoordinatorName1", corCoordinatorName);
+//        divHTML = divHTML.replace("&NOofHours1", corNOofHours);
+//        divHTML = divHTML.replace("&NoofStudents1", corNoofStudents);
+//        div.innerHTML = divHTML;
+//        document.getElementById('DynamicControls').append(div);
+//};
+//
+//function setValues(e) {
+//    console.log(e);
+//      if(e == "0")
+//    {    
+//        Course.setSubject = document.getElementById('Subject').value;
+//        Course.setCoordinatorName = document.getElementById('CoordinatorName').value;
+//        Course.setNOofHours = document.getElementById('NOofHours').value;
+//        Course.setNoofStudents = document.getElementById('NoofStudents').value;
+//        setValueOfControls(e, Course);
+//    }
+//   else
+//    {    
+//        var courseIns = new courseClass(document.getElementById('Subject1').value, document.getElementById('CoordinatorName1').value,
+//                    document.getElementById('NOofHours1').value,   document.getElementById('NoofStudents1').value                 
+//                                       )
+//        setValueOfControls(e, courseIns);
+//    }
+//}
+//
+//document.getElementById('SetValues').addEventListener('click', setValues.bind(this,0));
+//document.getElementById('SetValues1').addEventListener('click', setValues.bind(this,1));
 
+//Day 41
+function Product() {
 };
+   
+p = new Product();
+console.log(Object.prototype.isPrototypeOf(p)); //true, all objects point to Object
 
-//Using Inheritance
-function courseClass(Subject, CoordinatorName, NOofHours, NoofStudents) {
-    this.Subject = Subject;
-    this.CoordinatorName = CoordinatorName;
-    this.NOofHours = NOofHours;
-    this.NoofStudents = NoofStudents;
-}
-let count = 0;
-
-document.getElementById('Subject').value = Course.getSubject;
-document.getElementById('CoordinatorName').value = Course.getCoordinatorName;
-document.getElementById('NOofHours').value = Course.getNOofHours;
-document.getElementById('NoofStudents').value = Course.getNoofStudents;
-
-
- 
-
-
-function setValueOfControls(e, cor) {
-    console.log(e);
-    if(e == "0")
-    {   
-        document.getElementById('Subject').value = Course.getSubject;
-        document.getElementById('CoordinatorName').value = Course.getCoordinatorName;
-        document.getElementById('NOofHours').value = Course.getNOofHours;
-        document.getElementById('NoofStudents').value = Course.getNoofStudents; 
-        
-        var corSubject, corCoordinatorName, corNOofHours, corNoofStudents;
-        corSubject = cor.Subject;
-        corCoordinatorName = cor.CoordinatorName;
-        corNOofHours = cor.NOofHours;
-        corNoofStudents = cor.NoofStudents;
-        creatNewDiv(corSubject, corCoordinatorName, corNOofHours,corNoofStudents);
-
-    }
-    else {
-        
-         document.getElementById('Subject1').value = '';
-        document.getElementById('CoordinatorName1').value = '';
-        document.getElementById('NOofHours1').value = '';
-        document.getElementById('NoofStudents1').value = ''; 
-        
-       
-        var corSubject, corCoordinatorName, corNOofHours, corNoofStudents;
-        corSubject = cor.Subject;
-        corCoordinatorName = cor.CoordinatorName;
-        corNOofHours = cor.NOofHours;
-        corNoofStudents = cor.NoofStudents;
-        creatNewDiv(corSubject, corCoordinatorName, corNOofHours,corNoofStudents);
-       
-    }
-}
-
-function creatNewDiv(corSubject, corCoordinatorName, corNOofHours,corNoofStudents) {
- 
-      var div = document.createElement('div');
-        var corSubject, corCoordinatorName, corNOofHours, corNoofStudents;
-       
-        var divHTML = '<div class="div"><label>Subject</label> <label></label>&Subject1 </div> <div class="div"><label>Coordinator Name</label> &CoordinatorName1</div><div class="div"><label>NO of Hours</label> &NOofHours1</div><div class="div"><label>No of Students</label> &NoofStudents1</div><hr/>';
-        
-        divHTML = divHTML.replace("&Subject1", corSubject);
-        divHTML = divHTML.replace("&CoordinatorName1", corCoordinatorName);
-        divHTML = divHTML.replace("&NOofHours1", corNOofHours);
-        divHTML = divHTML.replace("&NoofStudents1", corNoofStudents);
-        
-        div.innerHTML = divHTML;
-        document.getElementById('DynamicControls').append(div);
-};
-
-
-function setValues(e) {
-    console.log(e);
-      if(e == "0")
-    {    
-        Course.setSubject = document.getElementById('Subject').value;
-        Course.setCoordinatorName = document.getElementById('CoordinatorName').value;
-        Course.setNOofHours = document.getElementById('NOofHours').value;
-        Course.setNoofStudents = document.getElementById('NoofStudents').value;
-        setValueOfControls(e, Course);
-    }
-   else
-    {    
-        var courseIns = new courseClass(document.getElementById('Subject1').value, document.getElementById('CoordinatorName1').value,
-                    document.getElementById('NOofHours1').value,   document.getElementById('NoofStudents1').value                 
-                                       )
-        setValueOfControls(e, courseIns);
-    }
-}
-
-document.getElementById('SetValues').addEventListener('click', setValues.bind(this,0));
-document.getElementById('SetValues1').addEventListener('click', setValues.bind(this,1));
 
 
 
