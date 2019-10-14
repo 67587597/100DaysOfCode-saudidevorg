@@ -678,13 +678,19 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day 49
+//var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+//
+//names[0] = 'Ruba'; //change value of index 0
+//names[names.length+1]  = 'Sara'; // Skip one index and then Add element 
+//console.log(names);
+
+//Day 50
 var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
 
-names[0] = 'Ruba'; //change value of index 0
-names[names.length+1]  = 'Sara'; // Skip one index and then Add element 
+delete names[0] ;
 console.log(names);
-
-
+names.length = 0;
+console.log(names);
 
 
 
