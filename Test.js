@@ -671,10 +671,18 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day 48
-var arr = new Array(2);
-console.log(arr.length);
-arr.length = 4;
-console.log(arr.length);
+//var arr = new Array(2);
+//console.log(arr.length);
+//arr.length = 4;
+//console.log(arr.length);
+
+
+//Day 49
+var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+
+names[0] = 'Ruba'; //change value of index 0
+names[names.length+1]  = 'Sara'; // Skip one index and then Add element 
+console.log(names);
 
 
 
