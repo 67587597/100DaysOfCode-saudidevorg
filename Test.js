@@ -645,29 +645,38 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 46 + Day 47
 
-function Student(name, GPA){
-    this.name = name;
-    this.GPA = GPA;
-}
+//function Student(name, GPA){
+//    this.name = name;
+//    this.GPA = GPA;
+//}
+//
+//var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+//var GPA = [4.8, 4.5, 5, 4, 4.9];
+//var studentsList = [];
+//
+//function addStudent(value, index){
+//     let st = new Student(names[index], GPA[index]);
+//     studentsList.push(st);
+//    }
+//
+//
+//names.forEach(addStudent);
+//
+//
+//function showStudents(value){
+//    console.log('Sudent Name: ' + value.name+ ' - GPA: ' + value.GPA )
+//}
+//
+//studentsList.forEach(showStudents);
 
-var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
-var GPA = [4.8, 4.5, 5, 4, 4.9];
-var studentsList = [];
 
-function addStudent(value, index){
-     let st = new Student(names[index], GPA[index]);
-     studentsList.push(st);
-    }
+//Day 48
+var arr = new Array(2);
+console.log(arr.length);
+arr.length = 4;
+console.log(arr.length);
 
 
-names.forEach(addStudent);
-
-
-function showStudents(value){
-    console.log('Sudent Name: ' + value.name+ ' - GPA: ' + value.GPA )
-}
-
-studentsList.forEach(showStudents);
 
 
 
