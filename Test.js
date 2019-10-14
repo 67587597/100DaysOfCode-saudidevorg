@@ -685,12 +685,33 @@ document.write(x + ',' + y + ',' + z);
 //console.log(names);
 
 //Day 50
-var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+//var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+//
+//delete names[0] ;
+//console.log(names);
+//names.length = 0;
+//console.log(names);
 
-delete names[0] ;
-console.log(names);
-names.length = 0;
-console.log(names);
+//Day 51
+
+var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+//Using for loop
+console.log('names before sort');
+for(var i =0; i< names.length; i++)
+    {
+        console.log( ' - ' + names[i]);
+    } 
+
+
+names.sort();
+console.log('names after sort');
+function afterSort(value){
+    console.log(' - ' + value)
+}
+
+names.forEach(afterSort);
+
+
 
 
 
