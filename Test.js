@@ -694,26 +694,51 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 51
 
-var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
-//Using for loop
-console.log('names before sort');
-for(var i =0; i< names.length; i++)
+//var names = ['Sara', 'Ghada', 'Nouf', 'Amal', 'Sondos'];
+////Using for loop
+//console.log('names before sort');
+//for(var i =0; i< names.length; i++)
+//    {
+//        console.log( ' - ' + names[i]);
+//    } 
+//
+//
+//names.sort();
+//console.log('names after sort');
+//function afterSort(value){
+//    console.log(' - ' + value)
+//}
+//
+//names.forEach(afterSort);
+
+//Day 52
+var mainArr = new Array(10);
+
+console.log(mainArr.length);
+for(var i = 0; i < mainArr.length; i++)
     {
-        console.log( ' - ' + names[i]);
-    } 
+        mainArr[i] = new Array(10);
+    }
 
 
-names.sort();
-console.log('names after sort');
-function afterSort(value){
-    console.log(' - ' + value)
+for(var x = 0; x < mainArr.length; x++)
+    {
+        for(var y = 0; y < mainArr[x].length; y++){
+            var col = y+1;
+            var row = x +1
+            mainArr[x][y] = col * row;
+        }
+    }
+
+
+function  showAllElements(value, index){
+    const i = index +1;
+    console.log( i + ' Multiplication Table -- ' + value); 
 }
 
-names.forEach(afterSort);
+mainArr.forEach(showAllElements);
 
-
-
-
+//showAllElements[3][4];
 
 
 
