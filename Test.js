@@ -712,38 +712,146 @@ document.write(x + ',' + y + ',' + z);
 //names.forEach(afterSort);
 
 //Day 52
-var mainArr = new Array(10);
+//var mainArr = new Array(10);
+//
+//console.log(mainArr.length);
+//for(var i = 0; i < mainArr.length; i++)
+//    {
+//        mainArr[i] = new Array(10);
+//    }
+//
+//
+//for(var x = 0; x < mainArr.length; x++)
+//    {
+//        for(var y = 0; y < mainArr[x].length; y++){
+//            var col = y+1;
+//            var row = x +1
+//            mainArr[x][y] = col * row;
+//        }
+//    }
+//
+//
+//function  showAllElements(value, index){
+//    const i = index +1;
+//    console.log( i + ' Multiplication Table -- ' + value); 
+//}
 
-console.log(mainArr.length);
-for(var i = 0; i < mainArr.length; i++)
-    {
-        mainArr[i] = new Array(10);
-    }
-
-
-for(var x = 0; x < mainArr.length; x++)
-    {
-        for(var y = 0; y < mainArr[x].length; y++){
-            var col = y+1;
-            var row = x +1
-            mainArr[x][y] = col * row;
-        }
-    }
-
-
-function  showAllElements(value, index){
-    const i = index +1;
-    console.log( i + ' Multiplication Table -- ' + value); 
-}
-
-mainArr.forEach(showAllElements);
+//mainArr.forEach(showAllElements);
 
 //showAllElements[3][4];
 
+//Day 53 + Day 54
+
+document.addEventListener("DOMContentLoaded", function() {   setEventListner()});
 
 
+var DataEntity = {
+    ArrEmployee: [],
+    DeleteEmp: function(id) {
+        this.ArrEmployee.splice(id,1);
+    }
+
+}
+
+let Employee = document.getElementById('Employee').value;
+let Job = document.getElementById('JobRole').value;
+let Experince = document.getElementById('Experience').value;
+
+var Controller = {
+ AddEmp: function(Employee, Job, Experince){
+       View.showNewEmp(View.GetLastID(), Employee, Job, Experince);
+       DataEntity.ArrEmployee[DataEntity.ArrEmployee.length] = [Employee, Job, Experince];
+   },
+
+    FilterEmp: function(Exp){
+        // console.log(DataEntity.FilterArrEmployee(Exp));
+         View.FilterEmp(Exp);
+   },
+
+    RmvFilterEmp: () => { View.RmvFilter()},
+    DeleteEmp: function(id) {
+        DataEntity.DeleteEmp(id);
+        View.DeleteEmp(id);
+    }
+    
+ 
+    
+}
+
+var View = {
+    table : document.getElementById('DynamicEmpData'),
+    GetLastID: function(){
+        var id;
+        if(this.table.rows.length <=1)
+            {
+             id =0;   
+        }
+        else{
+            console.log(this.table.rows[this.table.rows.length - 1 ].id);
+            id = parseInt(this.table.rows[this.table.rows.length - 1 ].id) + 1; 
+        }
+        return id;
+    },
+    showNewEmp: function(ID, Employee, Job, Experince){
+            console.log('judd');
+
+       var tr = document.createElement('tr');
+       var Employeetd = document.createElement('td');
+       var Jobtd = document.createElement('td');
+       var Experincetd = document.createElement('td');
+       var deletetd = document.createElement('td');
+        Employeetd.innerHTML = Employee;
+        Jobtd.innerHTML = Job;
+        Experincetd.innerHTML = Experince;
+        deletetd.innerHTML = 'Delete';
+        
+        tr.appendChild(Employeetd);
+        tr.appendChild(Jobtd);
+        tr.appendChild(Experincetd);
+        tr.appendChild(deletetd);
+        tr.id = ID;
+        
+        deletetd.addEventListener('click', Controller.DeleteEmp.bind(this,  tr.id));
+
+        //tr.setAttribute("id", ID);
+        this.table.appendChild(tr);
+    },
+    
+    FilterEmp: function(exp){
+        this.RmvFilter();
+            for(var i = 1, row; row = document.getElementById('DynamicEmpData').rows[i]; i++)  
+                {
+                    if (exp != row.cells[2].innerText)
+                        {
+                            console.log('hide' +row.id);
+                            document.getElementById(row.id).classList.add('hidden');
+                        }
+               }
+      },
+    
+  RmvFilter: function() {
+        
+         for(var i = 1, row; row = this.table.rows[i]; i++)  
+                {
+                    document.getElementById(row.id).classList.remove('hidden');
+                }
+        },
+    DeleteEmp: function(id) {
+            document.getElementById(id).remove();  
+    }
+}
 
 
+function setEventListner() {
+    document.getElementById('AddEmployee').addEventListener('click',function() { Controller.AddEmp(document.getElementById('Employee').value, document.getElementById('JobRole').value, document.getElementById('Experience').value)});
+    
+    document.getElementById('ExperienceFilterBtn').addEventListener('click',function() { 
+        Controller.FilterEmp(document.getElementById('ExperienceFilter').value)});
+    
+    document.getElementById('RmvExperienceFilterBtn').addEventListener('click',function() { 
+        Controller.RmvFilterEmp()});
+      
+}
 
 
 

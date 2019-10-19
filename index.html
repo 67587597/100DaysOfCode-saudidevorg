@@ -1,8 +1,48 @@
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body> 
+       
+    <div id="EmployeeDataEntering" >
+        
+        <div class="div">
+        <h2>Enter Employee Information</h2>
+        </div>
+        
+        
+      
+        <label>Employee</label>
+        <input ID="Employee" type="text" />
+        
+        <label>Job role</label>
+        <input ID="JobRole" type="text" />
+
+        <label>Experience</label>
+        <input ID="Experience" type="text" />
+    
+          
+        
+         <button id="AddEmployee" type="button"> Add Employee</button>
+        
+        <div class="div">
+        <label>Filter By Experience</label>
+        <input ID="ExperienceFilter" type="text" />
+         <button id="ExperienceFilterBtn" type="button"> Filter</button>
+         <button id="RmvExperienceFilterBtn" type="button"> Remove Filter</button>
+        </div>
+            
+    </div>
+        
+<table id="DynamicEmpData">
+    <th>Employee</th>
+    <th>Job Role</th>
+    <th>Experience</th>
+    <th>Delete</th>
+</table>
+        
+<!--
     <div id="setterAndGetter" >
         
         <div class="div">
@@ -74,6 +114,7 @@
         <h2>All Courses</h2>
         </div>
         
+-->
 <!--
         <div class="div">
         <label>Subject</label>

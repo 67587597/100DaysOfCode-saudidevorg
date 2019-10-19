@@ -1,7 +1,7 @@
 body {
-    background-color: dimgrey;
-    color: honeydew;
-    font-family: serif;
+    background-color: #5c7582;
+    color: darkslategray;
+    font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
 }
 
@@ -10,5 +10,33 @@ div {
     margin-top: 25px;
 }
 label {
-    color: darkblue;
+    color: darkgray;
+}
+
+table {
+    margin-left: 25%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+padding: 5px;
+
+}
+
+td {
+    color: black;
+}
+
+button {
+    background-color: whitesmoke;
+    border-color: darkgrey;
+   
+}
+
+input {
+    background-blend-mode: darken;
+}
+.hidden {
+    display: none;
 }
