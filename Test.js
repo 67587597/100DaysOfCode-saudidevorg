@@ -892,6 +892,40 @@ document.write('<br> -------------------- <br>');
 document.write('<br> sort Array: '+ alphabetArr.sort());
 document.write('<br> -------------------- <br>');
 
+//Day 56
+
+document.write('<br> Splice Array: '+ alphabetArr.splice(0,1, '1'));
+document.write('<br> Full Array: '+ alphabetArr);
+
+document.write('<br> -------------------- <br>');
+
+
+document.write('<br> push Array: '+ alphabetArr.push(2));
+document.write('<br> Full Array: '+ alphabetArr);
+
+document.write('<br> -------------------- <br>');
+
+
+document.write('<br> pop Array: '+ alphabetArr.pop());
+document.write('<br> Full Array: '+ alphabetArr);
+
+document.write('<br> -------------------- <br>');
+
+
+document.write('<br> unshift Array: '+ alphabetArr.shift());
+document.write('<br> Full Array: '+ alphabetArr);
+
+document.write('<br> -------------------- <br>');
+
+
+
+document.write('<br> unshift Array: '+ alphabetArr.unshift('a'));
+document.write('<br> Full Array: '+ alphabetArr);
+
+document.write('<br> -------------------- <br>');
+
+
+
 
 
 
