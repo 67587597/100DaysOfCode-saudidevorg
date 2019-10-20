@@ -925,7 +925,29 @@ document.write('<br> Full Array: '+ alphabetArr);
 document.write('<br> -------------------- <br>');
 
 
+//Day 57
+document.write('<br> Array to string: '+ alphabetArr.toString());
 
+document.write('<br> -------------------- <br>');
+
+
+var correspondingArr = new Array(26);
+let s = alphabetArr.join('');
+
+function showCharCode(value, index, arr)
+{
+    correspondingArr[index] = s.charCodeAt(index);
+    if(value == 'z')
+            document.write('<br> corresponding Array : '+ correspondingArr);
+}
+
+
+
+alphabetArr.forEach(showCharCode);
+document.write('<br> Array : '+ alphabetArr);
+
+
+document.write('<br> -------------------- <br>');
 
 
 
