@@ -986,30 +986,44 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 59
 
-var s = "Strings as arrays";
-var x ="test";
+//var s = "Strings as arrays";
+//var x ="test";
+//
+//document.write('<br>char at - string: '+ s.charAt(5));
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>INCLUDE - string: '+ s.includes('j'));
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>search - string: '+ s.search('j'));
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>to upper - string: '+ s.toUpperCase());
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>to lower - string: '+ s.toLowerCase());
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>locale compare - string: '+ s.localeCompare(x));
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>locale compare - string: '+ x.localeCompare(s));
+//document.write('<br> -------------------- <br>');
 
-document.write('<br>char at - string: '+ s.charAt(5));
-document.write('<br> -------------------- <br>');
 
-document.write('<br>INCLUDE - string: '+ s.includes('j'));
-document.write('<br> -------------------- <br>');
+//Day 60 + Day 61
+var first = [1, 2, 3, 5, 8, 13];
+var second = [1, 2, 3, 4, 8, 13];
 
-document.write('<br>search - string: '+ s.search('j'));
-document.write('<br> -------------------- <br>');
 
-document.write('<br>to upper - string: '+ s.toUpperCase());
-document.write('<br> -------------------- <br>');
+function compare(value1, index1){
+    second.forEach(function(value, index){ if(value1 != value && index1 == index) { 
+        document.write('index: ' + index + ' value: ' + value);
+    }
+    });
+}
 
-document.write('<br>to lower - string: '+ s.toLowerCase());
-document.write('<br> -------------------- <br>');
-
-document.write('<br>locale compare - string: '+ s.localeCompare(x));
-document.write('<br> -------------------- <br>');
-
-document.write('<br>locale compare - string: '+ x.localeCompare(s));
-document.write('<br> -------------------- <br>');
-
+first.forEach(compare);
 
 
 
