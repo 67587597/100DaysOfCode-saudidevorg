@@ -1028,42 +1028,65 @@ document.write(x + ',' + y + ',' + z);
 //Day 62
 
 //function
-function spellName(name){
-     var arr = name.split('');
-      arr.forEach((value) => document.write(value + '<br>'));
+//function spellName(name){
+//     var arr = name.split('');
+//      arr.forEach((value) => document.write(value + '<br>'));
+//}
+//
+//spellName('sondos');
+//document.write('------------------------------------------<br>');
+////return function
+//function returnSpellName(name){
+//     return  name.split('');
+//}
+//
+////store fnction as variable
+//var returnResult = returnSpellName('sondos');
+//returnResult.forEach((value) => document.write(value + '<br>'));
+//document.write('------------------------------------------<br>');
+//
+////nested functions call itself
+//(function nestedFunctions(name){  
+//    var arr = name.split('');
+//    arr.forEach(spelling);
+//    function spelling (value){
+//     document.write(value + '<br>');
+//    }
+//})('sondos');
+//document.write('<br>------------------------------------------<br>');
+//
+//
+//var myFunction1 = function (a, b) {return a * b}
+//document.write(myFunction1(4, 3));
+//document.write('<br>------------------------------------------<br>');
+//console.log(myFunction1);
+//
+//
+//var myFunction = new Function("a", "b", "return a * b");
+//document.write(myFunction(4, 3));
+//document.write('<br>------------------------------------------<br>');
+//console.log(myFunction);
+
+
+
+//Day 64
+
+//name is a property of global object.
+var name = 'Sondos';
+
+function printName(){
+    document.write(this.name +'<br>');
 }
 
-spellName('sondos');
-document.write('------------------------------------------<br>');
-//return function
-function returnSpellName(name){
-     return  name.split('');
+//print name pro[perty of global object]
+printName();
+
+var person ={
+    name: 'Sara',
+    age: 26
 }
 
-//store fnction as variable
-var returnResult = returnSpellName('sondos');
-returnResult.forEach((value) => document.write(value + '<br>'));
-document.write('------------------------------------------<br>');
+//print name propert of person object
+this.printName.call(person);
 
-//nested functions call itself
-(function nestedFunctions(name){  
-    var arr = name.split('');
-    arr.forEach(spelling);
-    function spelling (value){
-     document.write(value + '<br>');
-    }
-})('sondos');
-document.write('<br>------------------------------------------<br>');
-
-
-var myFunction1 = function (a, b) {return a * b}
-document.write(myFunction1(4, 3));
-document.write('<br>------------------------------------------<br>');
-console.log(myFunction1);
-
-
-var myFunction = new Function("a", "b", "return a * b");
-document.write(myFunction(4, 3));
-document.write('<br>------------------------------------------<br>');
-console.log(myFunction);
 
