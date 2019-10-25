@@ -952,39 +952,63 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 58
 
-var arr = [4,9,16,25, 4, 36];
+//var arr = [4,9,16,25, 4, 36];
+//
+//document.write('<br> map Array: '+ arr.map(Math.sqrt));
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br> filter Array: '+ arr.filter(function(n) { return n > 10 }));
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br> every Array: '+ arr.every(function(n) { return n%2==0 }));
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br> some Array: '+ arr.some(function(n) { return n%2==0 }));
+//document.write('<br> -------------------- <br>');
+//
+//
+//
+//document.write('<br> reduce Array: '+ arr.reduce(function(total, num) { return total - num;}));
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br> reduce right Array: '+ arr.reduceRight( function(total, num) { return total - num;}));
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br>index of Array: '+ arr.indexOf(4));
+//document.write('<br> -------------------- <br>');
+//
+//document.write('<br>last index of Array: '+ arr.lastIndexOf(4));
+//document.write('<br> -------------------- <br>');
 
-document.write('<br> map Array: '+ arr.map(Math.sqrt));
+//Day 59
+
+var s = "Strings as arrays";
+var x ="test";
+
+document.write('<br>char at - string: '+ s.charAt(5));
 document.write('<br> -------------------- <br>');
 
-
-document.write('<br> filter Array: '+ arr.filter(function(n) { return n > 10 }));
+document.write('<br>INCLUDE - string: '+ s.includes('j'));
 document.write('<br> -------------------- <br>');
 
-
-document.write('<br> every Array: '+ arr.every(function(n) { return n%2==0 }));
+document.write('<br>search - string: '+ s.search('j'));
 document.write('<br> -------------------- <br>');
 
-document.write('<br> some Array: '+ arr.some(function(n) { return n%2==0 }));
+document.write('<br>to upper - string: '+ s.toUpperCase());
 document.write('<br> -------------------- <br>');
 
-
-
-document.write('<br> reduce Array: '+ arr.reduce(function(total, num) { return total - num;}));
+document.write('<br>to lower - string: '+ s.toLowerCase());
 document.write('<br> -------------------- <br>');
 
-
-document.write('<br> reduce right Array: '+ arr.reduceRight( function(total, num) { return total - num;}));
+document.write('<br>locale compare - string: '+ s.localeCompare(x));
 document.write('<br> -------------------- <br>');
 
-
-document.write('<br>index of Array: '+ arr.indexOf(4));
+document.write('<br>locale compare - string: '+ x.localeCompare(s));
 document.write('<br> -------------------- <br>');
-
-document.write('<br>last index of Array: '+ arr.lastIndexOf(4));
-document.write('<br> -------------------- <br>');
-
-
 
 
 
