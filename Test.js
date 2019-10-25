@@ -1012,18 +1012,58 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day 60 + Day 61
-var first = [1, 2, 3, 5, 8, 13];
-var second = [1, 2, 3, 4, 8, 13];
+//var first = [1, 2, 3, 5, 8, 13];
+//var second = [1, 2, 3, 4, 8, 13];
+//
+//
+//function compare(value1, index1){
+//    second.forEach(function(value, index){ if(value1 != value && index1 == index) { 
+//        document.write('index: ' + index + ' value: ' + value);
+//    }
+//    });
+//}
+//
+//first.forEach(compare);
 
+//Day 62
 
-function compare(value1, index1){
-    second.forEach(function(value, index){ if(value1 != value && index1 == index) { 
-        document.write('index: ' + index + ' value: ' + value);
-    }
-    });
+//function
+function spellName(name){
+     var arr = name.split('');
+      arr.forEach((value) => document.write(value + '<br>'));
 }
 
-first.forEach(compare);
+spellName('sondos');
+document.write('------------------------------------------<br>');
+//return function
+function returnSpellName(name){
+     return  name.split('');
+}
+
+//store fnction as variable
+var returnResult = returnSpellName('sondos');
+returnResult.forEach((value) => document.write(value + '<br>'));
+document.write('------------------------------------------<br>');
+
+//nested functions call itself
+(function nestedFunctions(name){  
+    var arr = name.split('');
+    arr.forEach(spelling);
+    function spelling (value){
+     document.write(value + '<br>');
+    }
+})('sondos');
+document.write('<br>------------------------------------------<br>');
 
 
+var myFunction1 = function (a, b) {return a * b}
+document.write(myFunction1(4, 3));
+document.write('<br>------------------------------------------<br>');
+console.log(myFunction1);
+
+
+var myFunction = new Function("a", "b", "return a * b");
+document.write(myFunction(4, 3));
+document.write('<br>------------------------------------------<br>');
+console.log(myFunction);
 
