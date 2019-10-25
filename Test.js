@@ -855,106 +855,134 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day 55
-
-var alphabetArr = new Array(26);
-//document.write(alphabetArr.length);
-
-for(var i=97,x= 0; i<123, x < alphabetArr.length; x++)
-    alphabetArr[x] = String.fromCharCode(i++) 
-
-document.write(alphabetArr);
-document.write('<br> -------------------- <br>');
-
-
-document.write(alphabetArr.join());
-document.write('<br> -------------------- <br>');
-
-
-
-document.write('<br> reverse Array: '+ alphabetArr.reverse());
-document.write('<br> -------------------- <br>');
-
-
-var subArr = [];
-subArr = alphabetArr.slice(0,5);
-document.write('original array: ' + alphabetArr);
-document.write( '<br> sub Array: '+ subArr);
-
-document.write('<br> -------------------- <br>');
-
-
-
-document.write('<br> concat Array: '+ alphabetArr.concat(subArr));
-document.write('<br> -------------------- <br>');
-
-
-
-document.write('<br> sort Array: '+ alphabetArr.sort());
-document.write('<br> -------------------- <br>');
-
-//Day 56
-
-document.write('<br> Splice Array: '+ alphabetArr.splice(0,1, '1'));
-document.write('<br> Full Array: '+ alphabetArr);
-
-document.write('<br> -------------------- <br>');
-
-
-document.write('<br> push Array: '+ alphabetArr.push(2));
-document.write('<br> Full Array: '+ alphabetArr);
-
-document.write('<br> -------------------- <br>');
-
-
-document.write('<br> pop Array: '+ alphabetArr.pop());
-document.write('<br> Full Array: '+ alphabetArr);
-
-document.write('<br> -------------------- <br>');
-
-
-document.write('<br> unshift Array: '+ alphabetArr.shift());
-document.write('<br> Full Array: '+ alphabetArr);
-
-document.write('<br> -------------------- <br>');
-
-
-
-document.write('<br> unshift Array: '+ alphabetArr.unshift('a'));
-document.write('<br> Full Array: '+ alphabetArr);
-
-document.write('<br> -------------------- <br>');
+//
+//var alphabetArr = new Array(26);
+////document.write(alphabetArr.length);
+//
+//for(var i=97,x= 0; i<123, x < alphabetArr.length; x++)
+//    alphabetArr[x] = String.fromCharCode(i++) 
+//
+//document.write(alphabetArr);
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write(alphabetArr.join());
+//document.write('<br> -------------------- <br>');
+//
+//
+//
+//document.write('<br> reverse Array: '+ alphabetArr.reverse());
+//document.write('<br> -------------------- <br>');
+//
+//
+//var subArr = [];
+//subArr = alphabetArr.slice(0,5);
+//document.write('original array: ' + alphabetArr);
+//document.write( '<br> sub Array: '+ subArr);
+//
+//document.write('<br> -------------------- <br>');
+//
+//
+//
+//document.write('<br> concat Array: '+ alphabetArr.concat(subArr));
+//document.write('<br> -------------------- <br>');
+//
+//
+//
+//document.write('<br> sort Array: '+ alphabetArr.sort());
+//document.write('<br> -------------------- <br>');
+//
+////Day 56
+//
+//document.write('<br> Splice Array: '+ alphabetArr.splice(0,1, '1'));
+//document.write('<br> Full Array: '+ alphabetArr);
+//
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br> push Array: '+ alphabetArr.push(2));
+//document.write('<br> Full Array: '+ alphabetArr);
+//
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br> pop Array: '+ alphabetArr.pop());
+//document.write('<br> Full Array: '+ alphabetArr);
+//
+//document.write('<br> -------------------- <br>');
+//
+//
+//document.write('<br> unshift Array: '+ alphabetArr.shift());
+//document.write('<br> Full Array: '+ alphabetArr);
+//
+//document.write('<br> -------------------- <br>');
+//
+//
+//
+//document.write('<br> unshift Array: '+ alphabetArr.unshift('a'));
+//document.write('<br> Full Array: '+ alphabetArr);
+//
+//document.write('<br> -------------------- <br>');
 
 
 //Day 57
-document.write('<br> Array to string: '+ alphabetArr.toString());
+//document.write('<br> Array to string: '+ alphabetArr.toString());
+//
+//document.write('<br> -------------------- <br>');
+//
+//
+//var correspondingArr = new Array(26);
+//let s = alphabetArr.join('');
+//
+//function showCharCode(value, index, arr)
+//{
+//    correspondingArr[index] = s.charCodeAt(index);
+//    if(value == 'z')
+//            document.write('<br> corresponding Array : '+ correspondingArr);
+//}
+//
+//
+//
+//alphabetArr.forEach(showCharCode);
+//document.write('<br> Array : '+ alphabetArr);
+//
+//
+//document.write('<br> -------------------- <br>');
 
+
+//Day 58
+
+var arr = [4,9,16,25, 4, 36];
+
+document.write('<br> map Array: '+ arr.map(Math.sqrt));
 document.write('<br> -------------------- <br>');
 
 
-var correspondingArr = new Array(26);
-let s = alphabetArr.join('');
-
-function showCharCode(value, index, arr)
-{
-    correspondingArr[index] = s.charCodeAt(index);
-    if(value == 'z')
-            document.write('<br> corresponding Array : '+ correspondingArr);
-}
+document.write('<br> filter Array: '+ arr.filter(function(n) { return n > 10 }));
+document.write('<br> -------------------- <br>');
 
 
+document.write('<br> every Array: '+ arr.every(function(n) { return n%2==0 }));
+document.write('<br> -------------------- <br>');
 
-alphabetArr.forEach(showCharCode);
-document.write('<br> Array : '+ alphabetArr);
-
-
+document.write('<br> some Array: '+ arr.some(function(n) { return n%2==0 }));
 document.write('<br> -------------------- <br>');
 
 
 
+document.write('<br> reduce Array: '+ arr.reduce(function(total, num) { return total - num;}));
+document.write('<br> -------------------- <br>');
 
 
+document.write('<br> reduce right Array: '+ arr.reduceRight( function(total, num) { return total - num;}));
+document.write('<br> -------------------- <br>');
 
 
+document.write('<br>index of Array: '+ arr.indexOf(4));
+document.write('<br> -------------------- <br>');
+
+document.write('<br>last index of Array: '+ arr.lastIndexOf(4));
+document.write('<br> -------------------- <br>');
 
 
 
