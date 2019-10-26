@@ -1071,22 +1071,36 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 64
 
-//name is a property of global object.
-var name = 'Sondos';
+////name is a property of global object.
+//var name = 'Sondos';
+//
+//function printName(){
+//    document.write(this.name +'<br>');
+//}
+//
+////print name pro[perty of global object]
+//printName();
+//
+//var person ={
+//    name: 'Sara',
+//    age: 26
+//}
+//
+////print name propert of person object
+//this.printName.call(person);
 
-function printName(){
-    document.write(this.name +'<br>');
-}
-
-//print name pro[perty of global object]
-printName();
-
+//Day 65
 var person ={
-    name: 'Sara',
-    age: 26
+    printAge: function(birthdate){
+        document.write( new Date().getFullYear() - birthdate);
+    }
 }
 
-//print name propert of person object
-this.printName.call(person);
+
+var person1 ={
+    name: 'Sondos'
+}
 
 
+person.printAge.apply(person1, [1995]);
+document.write('<br>');
