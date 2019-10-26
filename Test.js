@@ -1089,18 +1089,66 @@ document.write(x + ',' + y + ',' + z);
 ////print name propert of person object
 //this.printName.call(person);
 
-//Day 65
-var person ={
-    printAge: function(birthdate){
-        document.write( new Date().getFullYear() - birthdate);
-    }
+////Day 65
+//var person ={
+//    printAge: function(birthdate){
+//        document.write( new Date().getFullYear() - birthdate);
+//    }
+//}
+//
+//
+//var person1 ={
+//    name: 'Sondos'
+//}
+//
+//
+//person.printAge.apply(person1, [1995]);
+//document.write('<br>');
+//
+//
+//
+//Day 66
+var counter = 0;
+function add() {
+ counter += 1;
 }
-
-
-var person1 ={
-    name: 'Sondos'
-}
-
-
-person.printAge.apply(person1, [1995]);
+add();
+add();
+add();
+document.write(counter);
 document.write('<br>');
+
+function add1() {
+ var counter = 0;
+ counter += 1;
+}
+
+add1();
+add1();
+add1();
+document.write(counter);
+document.write('<br>');
+
+function add2() {
+ var counter = 0;
+ counter += 1;
+ return counter;
+}
+add2();
+add2();
+add2();
+document.write(add2());
+document.write('<br>');
+
+var add3 = (function () {
+ var counter = 0;
+ return function () {counter += 1; return counter}
+})();
+add3();
+add3();
+add3();
+document.write(add3());
+document.write('<br>');
+
+
+
