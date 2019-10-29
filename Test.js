@@ -1108,47 +1108,76 @@ document.write(x + ',' + y + ',' + z);
 //
 //
 //Day 66
-var counter = 0;
-function add() {
- counter += 1;
+//var counter = 0;
+//function add() {
+// counter += 1;
+//}
+//add();
+//add();
+//add();
+//document.write(counter);
+//document.write('<br>');
+//
+//function add1() {
+// var counter = 0;
+// counter += 1;
+//}
+//
+//add1();
+//add1();
+//add1();
+//document.write(counter);
+//document.write('<br>');
+//
+//function add2() {
+// var counter = 0;
+// counter += 1;
+// return counter;
+//}
+//add2();
+//add2();
+//add2();
+//document.write(add2());
+//document.write('<br>');
+//
+//var add3 = (function () {
+// var counter = 0;
+// return function () {counter += 1; return counter}
+//})();
+//add3();
+//add3();
+//add3();
+//document.write(add3());
+//document.write('<br>');
+
+
+//Day 67 + Day 68
+
+//reference https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/
+
+const memorize = function(fn){
+    let cashe = {};
+    return function(...arg){
+        var n = arg[0];
+        if(n in cashe)
+            {
+                console.log('reterive from cashe');
+                return cashe[n];
+            }
+        else {
+            console.log('insert in cashe');
+            var result = fn(n);
+            cashe[n] = result;
+            return  result;
+        }
+    }
+ }
+
+function increamentNo(a){
+    return a + 1;
 }
-add();
-add();
-add();
-document.write(counter);
-document.write('<br>');
 
-function add1() {
- var counter = 0;
- counter += 1;
-}
-
-add1();
-add1();
-add1();
-document.write(counter);
-document.write('<br>');
-
-function add2() {
- var counter = 0;
- counter += 1;
- return counter;
-}
-add2();
-add2();
-add2();
-document.write(add2());
-document.write('<br>');
-
-var add3 = (function () {
- var counter = 0;
- return function () {counter += 1; return counter}
-})();
-add3();
-add3();
-add3();
-document.write(add3());
-document.write('<br>');
-
-
-
+const memoize = memorize(increamentNo);
+document.write(memoize(increamentNo(1)) +'<br>');
+document.write(memoize(increamentNo(1)) +'<br>');
+document.write(memoize(increamentNo(2)) +'<br>');
