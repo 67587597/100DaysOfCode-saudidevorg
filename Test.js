@@ -1182,7 +1182,7 @@ document.write(x + ',' + y + ',' + z);
 //document.write(memoize(increamentNo(1)) +'<br>');
 //document.write(memoize(increamentNo(2)) +'<br>');
 
-//Day 68
+//Day 69
 window.onload = function() {
     
     blackHeader = document.getElementById('black');
