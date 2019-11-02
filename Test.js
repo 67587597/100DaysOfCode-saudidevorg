@@ -1181,28 +1181,28 @@ document.write(x + ',' + y + ',' + z);
 //document.write(memoize(increamentNo(1)) +'<br>');
 //document.write(memoize(increamentNo(1)) +'<br>');
 //document.write(memoize(increamentNo(2)) +'<br>');
-
-//Day 69
-window.onload = function() {
-    
-    blackHeader = document.getElementById('black');
-    whiteHeader = document.getElementById('white');
-    grayHeader = document.getElementById('gray');
-    
-    arr =  [blackHeader, whiteHeader, grayHeader];
-    arr.forEach(addEv);
-    function addEv(value){ 
-     value.onclick = function (){
-       // console.log(value);
-        var s = value.id;
-        //console.log(s.classList.contains(s.toString()));
-         if(value.classList.contains(s.toString()))
-             document.body.style.background = s.toString();
-        else
-            document.body.style.background = '#5c7582';   
-      document.getElementById(s).classList.toggle(s.toString());
-
-    };
-    }
-  
-};
+//
+////Day 69
+//window.onload = function() {
+//    
+//    blackHeader = document.getElementById('black');
+//    whiteHeader = document.getElementById('white');
+//    grayHeader = document.getElementById('gray');
+//    
+//    arr =  [blackHeader, whiteHeader, grayHeader];
+//    arr.forEach(addEv);
+//    function addEv(value){ 
+//     value.onclick = function (){
+//       // console.log(value);
+//        var s = value.id;
+//        //console.log(s.classList.contains(s.toString()));
+//         if(value.classList.contains(s.toString()))
+//             document.body.style.background = s.toString();
+//        else
+//            document.body.style.background = '#5c7582';   
+//      document.getElementById(s).classList.toggle(s.toString());
+//
+//    };
+//}
+//  
+//};

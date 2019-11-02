@@ -21,6 +21,9 @@ h1 {
    margin-left: 40%; 
     margin-top: 100px;
 }
+a {
+    color: indianred;
+}
 
 table, th, td {
   border: 1px solid black;
