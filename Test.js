@@ -1199,8 +1199,9 @@ window.onload = function() {
          if(value.classList.contains(s.toString()))
              document.body.style.background = s.toString();
         else
-            document.body.style.background = '#5c7582'; 
-           
+            document.body.style.background = '#5c7582';   
+      document.getElementById(s).classList.toggle(s.toString());
+
     };
     }
   
