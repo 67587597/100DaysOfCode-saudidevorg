@@ -17,6 +17,10 @@ table {
     margin-left: 25%;
     border-collapse: collapse;
 }
+h1 {
+   margin-left: 40%; 
+    margin-top: 100px;
+}
 
 table, th, td {
   border: 1px solid black;
@@ -40,3 +44,14 @@ input {
 .hidden {
     display: none;
 }
+.black {
+    color: black;
+}
+.gray {
+    color: gray; 
+}
+
+.white {
+    color: white; 
+}
+

@@ -1155,29 +1155,53 @@ document.write(x + ',' + y + ',' + z);
 
 //reference https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/
 
-const memorize = function(fn){
-    let cashe = {};
-    return function(...arg){
-        var n = arg[0];
-        if(n in cashe)
-            {
-                console.log('reterive from cashe');
-                return cashe[n];
-            }
-        else {
-            console.log('insert in cashe');
-            var result = fn(n);
-            cashe[n] = result;
-            return  result;
-        }
+//const memorize = function(fn){
+//    let cashe = {};
+//    return function(...arg){
+//        var n = arg[0];
+//        if(n in cashe)
+//            {
+//                console.log('reterive from cashe');
+//                return cashe[n];
+//            }
+//        else {
+//            console.log('insert in cashe');
+//            var result = fn(n);
+//            cashe[n] = result;
+//            return  result;
+//        }
+//    }
+// }
+//
+//function increamentNo(a){
+//    return a + 1;
+//}
+//
+//const memoize = memorize(increamentNo);
+//document.write(memoize(increamentNo(1)) +'<br>');
+//document.write(memoize(increamentNo(1)) +'<br>');
+//document.write(memoize(increamentNo(2)) +'<br>');
+
+//Day 68
+window.onload = function() {
+    
+    blackHeader = document.getElementById('black');
+    whiteHeader = document.getElementById('white');
+    grayHeader = document.getElementById('gray');
+    
+    arr =  [blackHeader, whiteHeader, grayHeader];
+    arr.forEach(addEv);
+    function addEv(value){ 
+     value.onclick = function (){
+       // console.log(value);
+        var s = value.id;
+        //console.log(s.classList.contains(s.toString()));
+         if(value.classList.contains(s.toString()))
+             document.body.style.background = s.toString();
+        else
+            document.body.style.background = '#5c7582'; 
+           
+    };
     }
- }
-
-function increamentNo(a){
-    return a + 1;
-}
-
-const memoize = memorize(increamentNo);
-document.write(memoize(increamentNo(1)) +'<br>');
-document.write(memoize(increamentNo(1)) +'<br>');
-document.write(memoize(increamentNo(2)) +'<br>');
+  
+};
