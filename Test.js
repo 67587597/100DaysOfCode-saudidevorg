@@ -1206,3 +1206,16 @@ document.write(x + ',' + y + ',' + z);
 //}
 //  
 //};
+
+//Day 71
+var i = setInterval(increaseCount, 100);
+function increaseCount(){
+    let cuurCount = parseInt(document.getElementById('count').innerHTML);
+    console.log(cuurCount);
+    var newCount = cuurCount +1;
+    document.getElementById('count').innerHTML = newCount;
+}
+
+function stopCounting(){
+    clearInterval(i);
+}
