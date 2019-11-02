@@ -1207,15 +1207,23 @@ document.write(x + ',' + y + ',' + z);
 //  
 //};
 
-//Day 71
-var i = setInterval(increaseCount, 100);
+//Day 71 + Day 71
+let cuurCount ;
+var i
+ var w;
+function startInterval(){ 
+   i = setInterval(increaseCount, 100);}
+startInterval();
 function increaseCount(){
-    let cuurCount = parseInt(document.getElementById('count').innerHTML);
+    cuurCount = parseInt(document.getElementById('count').innerHTML);
     console.log(cuurCount);
-    var newCount = cuurCount +1;
-    document.getElementById('count').innerHTML = newCount;
+    cuurCount = cuurCount +1;
+    document.getElementById('count').innerHTML = cuurCount;
 }
 
 function stopCounting(){
     clearInterval(i);
+   
+    w = window.open("", "myWindow", "width=400, height=200");
+    w.document.write('count =' + cuurCount); //+ ' close this window to continue counting';
 }
