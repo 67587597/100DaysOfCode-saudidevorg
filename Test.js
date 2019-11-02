@@ -1208,22 +1208,76 @@ document.write(x + ',' + y + ',' + z);
 //};
 
 //Day 71 + Day 71
-let cuurCount ;
-var i
- var w;
-function startInterval(){ 
-   i = setInterval(increaseCount, 100);}
-startInterval();
-function increaseCount(){
-    cuurCount = parseInt(document.getElementById('count').innerHTML);
-    console.log(cuurCount);
-    cuurCount = cuurCount +1;
-    document.getElementById('count').innerHTML = cuurCount;
-}
+//let cuurCount ;
+//var i
+// var w;
+//function startInterval(){ 
+//   i = setInterval(increaseCount, 100);}
+//startInterval();
+//function increaseCount(){
+//    cuurCount = parseInt(document.getElementById('count').innerHTML);
+//    console.log(cuurCount);
+//    cuurCount = cuurCount +1;
+//    document.getElementById('count').innerHTML = cuurCount;
+//}
+//
+//function stopCounting(){
+//    clearInterval(i);
+//   
+//    w = window.open("", "myWindow", "width=400, height=200");
+//    w.document.write('count =' + cuurCount); //+ ' close this window to continue counting';
+//}
 
-function stopCounting(){
-    clearInterval(i);
-   
-    w = window.open("", "myWindow", "width=400, height=200");
-    w.document.write('count =' + cuurCount); //+ ' close this window to continue counting';
+//Day 72
+window.onload = function() {
+    var i;
+    var name;
+     
+    blackHeader = document.getElementById('black');
+    whiteHeader = document.getElementById('white');
+    grayHeader = document.getElementById('gray');
+    wrong =  document.getElementById('wrong');
+    correct =  document.getElementById('correct');
+    currname =  document.getElementById('name');
+    name = prompt('Enter your Name');
+    currname.innerHTML = name;
+    
+    function startGaming(){
+        
+    i = setInterval(recolor, 450);
+    }
+    function recolor() {
+        var x =  document.body.style.backgroundColor;
+        if(x == "black"){
+            document.body.style.backgroundColor = "gray";
+        }
+        else if(x == "gray")
+            document.body.style.backgroundColor = "white";
+        else 
+            document.body.style.backgroundColor = "black";
+        //console.log(document.body.style.backgroundColor);
+            
+    }
+        arr =  [blackHeader, whiteHeader, grayHeader];
+    arr.forEach(addEv);
+    function addEv(value){ 
+     value.onclick = function (){
+        //console.log(value);
+        
+        var s = value.id;
+         if(s == document.body.style.backgroundColor){
+             alert('Correct !');
+             clearInterval(i);
+             correct.innerHTML = parseInt(correct.innerHTML) +1;
+         }
+         else{
+             alert('Wrong !');
+             clearInterval(i);
+              wrong.innerHTML = parseInt(wrong.innerHTML) +1;
+         }
+
+    };
+        startGaming();
 }
+  
+};
