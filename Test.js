@@ -1284,20 +1284,29 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day 74 + Day 75
-$("#openWebsite").click(
-function() {
-  $("#dialog").dialog({
-    resizable: false,
-    height: "auto",
-    width: 400,
-    modal: true,
-    buttons: {
-      "open  new window": function() {
-          window.open("https://saudidev.org", "", "width=200,height=100")
-      },
-      "open New Tab": function() {
-          window.open("https://saudidev.org");
-      }
-    }
-  });
-});
+//$("#openWebsite").click(
+//function() {
+//  $("#dialog").dialog({
+//    resizable: false,
+//    height: "auto",
+//    width: 400,
+//    modal: true,
+//    buttons: {
+//      "open  new window": function() {
+//          window.open("https://saudidev.org", "", "width=200,height=100")
+//      },
+//      "open New Tab": function() {
+//          window.open("https://saudidev.org");
+//      }
+//    }
+//  });
+//});
+
+//Day 76
+document.getElementById('reset').onclick = function(){
+       document.getElementsByName('form').forEach(function(cur){
+        cur.value = '';
+    });
+};
+
+
