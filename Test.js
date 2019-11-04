@@ -1228,7 +1228,7 @@ document.write(x + ',' + y + ',' + z);
 //    w.document.write('count =' + cuurCount); //+ ' close this window to continue counting';
 //}
 
-//Day 72
+//Day 72 + Day 73
 //window.onload = function() {
 //    var i;
 //    var name;
@@ -1283,7 +1283,7 @@ document.write(x + ',' + y + ',' + z);
 //};
 
 
-//Day 73 + Day 74
+//Day 74 + Day 75
 $("#openWebsite").click(
 function() {
   $("#dialog").dialog({
