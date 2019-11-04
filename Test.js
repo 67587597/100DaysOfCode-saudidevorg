@@ -1229,55 +1229,75 @@ document.write(x + ',' + y + ',' + z);
 //}
 
 //Day 72
-window.onload = function() {
-    var i;
-    var name;
-     
-    blackHeader = document.getElementById('black');
-    whiteHeader = document.getElementById('white');
-    grayHeader = document.getElementById('gray');
-    wrong =  document.getElementById('wrong');
-    correct =  document.getElementById('correct');
-    currname =  document.getElementById('name');
-    name = prompt('Enter your Name');
-    currname.innerHTML = name;
-    
-    function startGaming(){
-        
-    i = setInterval(recolor, 450);
-    }
-    function recolor() {
-        var x =  document.body.style.backgroundColor;
-        if(x == "black"){
-            document.body.style.backgroundColor = "gray";
-        }
-        else if(x == "gray")
-            document.body.style.backgroundColor = "white";
-        else 
-            document.body.style.backgroundColor = "black";
-        //console.log(document.body.style.backgroundColor);
-            
-    }
-        arr =  [blackHeader, whiteHeader, grayHeader];
-    arr.forEach(addEv);
-    function addEv(value){ 
-     value.onclick = function (){
-        //console.log(value);
-        
-        var s = value.id;
-         if(s == document.body.style.backgroundColor){
-             alert('Correct !');
-             clearInterval(i);
-             correct.innerHTML = parseInt(correct.innerHTML) +1;
-         }
-         else{
-             alert('Wrong !');
-             clearInterval(i);
-              wrong.innerHTML = parseInt(wrong.innerHTML) +1;
-         }
+//window.onload = function() {
+//    var i;
+//    var name;
+//     
+//    blackHeader = document.getElementById('black');
+//    whiteHeader = document.getElementById('white');
+//    grayHeader = document.getElementById('gray');
+//    wrong =  document.getElementById('wrong');
+//    correct =  document.getElementById('correct');
+//    currname =  document.getElementById('name');
+//    name = prompt('Enter your Name');
+//    currname.innerHTML = name;
+//    
+//    function startGaming(){
+//        
+//    i = setInterval(recolor, 450);
+//    }
+//    function recolor() {
+//        var x =  document.body.style.backgroundColor;
+//        if(x == "black"){
+//            document.body.style.backgroundColor = "gray";
+//        }
+//        else if(x == "gray")
+//            document.body.style.backgroundColor = "white";
+//        else 
+//            document.body.style.backgroundColor = "black";
+//        //console.log(document.body.style.backgroundColor);
+//            
+//    }
+//        arr =  [blackHeader, whiteHeader, grayHeader];
+//    arr.forEach(addEv);
+//    function addEv(value){ 
+//     value.onclick = function (){
+//        //console.log(value);
+//        
+//        var s = value.id;
+//         if(s == document.body.style.backgroundColor){
+//             alert('Correct !');
+//             clearInterval(i);
+//             correct.innerHTML = parseInt(correct.innerHTML) +1;
+//         }
+//         else{
+//             alert('Wrong !');
+//             clearInterval(i);
+//              wrong.innerHTML = parseInt(wrong.innerHTML) +1;
+//         }
+//
+//    };
+//        startGaming();
+//}
+//  
+//};
 
-    };
-        startGaming();
-}
-  
-};
+
+//Day 73 + Day 74
+$("#openWebsite").click(
+function() {
+  $("#dialog").dialog({
+    resizable: false,
+    height: "auto",
+    width: 400,
+    modal: true,
+    buttons: {
+      "open  new window": function() {
+          window.open("https://saudidev.org", "", "width=200,height=100")
+      },
+      "open New Tab": function() {
+          window.open("https://saudidev.org");
+      }
+    }
+  });
+});
