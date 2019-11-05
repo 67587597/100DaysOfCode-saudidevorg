@@ -1303,10 +1303,36 @@ document.write(x + ',' + y + ',' + z);
 //});
 
 //Day 76
-document.getElementById('reset').onclick = function(){
-       document.getElementsByName('form').forEach(function(cur){
-        cur.value = '';
-    });
-};
+//document.getElementById('reset').onclick = function(){
+//       document.getElementsByName('form').forEach(function(cur){
+//        cur.value = '';
+//    });
+//};
+
+//Day 77 + Day 78
+
+var Employee = new Map();
+
+Employee.set('Name', 'Sondos');
+Employee.set('Age', 24);
+Employee.set('YearOfExperience', 1);
+
+var divmap = document.getElementById('map');
+
+Employee.forEach(function(cur, key) { 
+    var d = document.createDocumentFragment();
+
+ var h = document.createElement('H2');
+var string = document.createTextNode(key);
+var v = document.createElement('H3');
+v.innerHTML = cur;
+    
+h.appendChild(string);
+d.appendChild(v);
+
+d.insertBefore(h,v);
+divmap.appendChild(d);
+
+});
 
 
