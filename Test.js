@@ -1311,6 +1311,32 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 77 + Day 78
 
+//var Employee = new Map();
+//
+//Employee.set('Name', 'Sondos');
+//Employee.set('Age', 24);
+//Employee.set('YearOfExperience', 1);
+//
+//var divmap = document.getElementById('map');
+//
+//Employee.forEach(function(cur, key) { 
+//    var d = document.createDocumentFragment();
+//
+// var h = document.createElement('H2');
+//var string = document.createTextNode(key);
+//var v = document.createElement('H3');
+//v.innerHTML = cur;
+//    
+//h.appendChild(string);
+//d.appendChild(v);
+//
+//d.insertBefore(h,v);
+//divmap.appendChild(d);
+//
+//});
+
+
+//Day79
 var Employee = new Map();
 
 Employee.set('Name', 'Sondos');
@@ -1336,3 +1362,8 @@ divmap.appendChild(d);
 });
 
 
+while(divmap.hasChildNodes() && (divmap.getElementsByTagName('h2').length>=1))
+{
+var d = divmap.getElementsByTagName('h2')[0];
+divmap.removeChild(d);
+}
