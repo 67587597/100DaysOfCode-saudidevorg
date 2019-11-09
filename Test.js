@@ -1370,11 +1370,17 @@ document.write(x + ',' + y + ',' + z);
 
 //Day 80
 
+//
+//function myFunction() {
+// var elmnt = document.getElementById("myDIV");
+// var x = elmnt.scrollLeft;
+// var y = elmnt.scrollTop;
+// document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y +
+//"px";
+//}
 
-function myFunction() {
- var elmnt = document.getElementById("myDIV");
- var x = elmnt.scrollLeft;
- var y = elmnt.scrollTop;
- document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y +
-"px";
-}
+//Day 81 + Day 82
+
+//Get top most element at specific coordinator
+var el = document.elementFromPoint(10,10); //Answer <h2 id="1">1</h2>
+console.log(el);
