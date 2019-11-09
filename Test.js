@@ -1337,33 +1337,44 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day79
-var Employee = new Map();
+//var Employee = new Map();
+//
+//Employee.set('Name', 'Sondos');
+//Employee.set('Age', 24);
+//Employee.set('YearOfExperience', 1);
+//
+//var divmap = document.getElementById('map');
+//
+//Employee.forEach(function(cur, key) { 
+//    var d = document.createDocumentFragment();
+//
+// var h = document.createElement('H2');
+//var string = document.createTextNode(key);
+//var v = document.createElement('H3');
+//v.innerHTML = cur;
+//    
+//h.appendChild(string);
+//d.appendChild(v);
+//
+//d.insertBefore(h,v);
+//divmap.appendChild(d);
+//
+//});
+//
+//
+//while(divmap.hasChildNodes() && (divmap.getElementsByTagName('h2').length>=1))
+//{
+//var d = divmap.getElementsByTagName('h2')[0];
+//divmap.removeChild(d);
+//}
 
-Employee.set('Name', 'Sondos');
-Employee.set('Age', 24);
-Employee.set('YearOfExperience', 1);
-
-var divmap = document.getElementById('map');
-
-Employee.forEach(function(cur, key) { 
-    var d = document.createDocumentFragment();
-
- var h = document.createElement('H2');
-var string = document.createTextNode(key);
-var v = document.createElement('H3');
-v.innerHTML = cur;
-    
-h.appendChild(string);
-d.appendChild(v);
-
-d.insertBefore(h,v);
-divmap.appendChild(d);
-
-});
+//Day 80
 
 
-while(divmap.hasChildNodes() && (divmap.getElementsByTagName('h2').length>=1))
-{
-var d = divmap.getElementsByTagName('h2')[0];
-divmap.removeChild(d);
+function myFunction() {
+ var elmnt = document.getElementById("myDIV");
+ var x = elmnt.scrollLeft;
+ var y = elmnt.scrollTop;
+ document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y +
+"px";
 }
