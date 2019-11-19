@@ -1392,12 +1392,17 @@ document.write(x + ',' + y + ',' + z);
 //}
 
 //Day 84
-function mouseOver(){
- console.log('mouse over');
-}
+//function mouseOver(){
+// console.log('mouse over');
+//}
+//
+//function mouseOut(){
+// console.log('mouse out');
+//
+//}
 
-function mouseOut(){
- console.log('mouse out');
-
-}
-
+//Day 85
+//$('.touchedDiv').bind('touchend', function() {
+//  alert('touched !"');});
+document.getElementById ("touchedDiv").addEventListener('touchend', function() {
+  alert('touched !');})
