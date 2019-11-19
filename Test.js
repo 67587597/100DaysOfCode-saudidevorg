@@ -1387,6 +1387,17 @@ document.write(x + ',' + y + ',' + z);
 
 
 //Day 83
-function welcome(){
-    alert('hello');
+//function welcome(){
+//    alert('hello');
+//}
+
+//Day 84
+function mouseOver(){
+ console.log('mouse over');
 }
+
+function mouseOut(){
+ console.log('mouse out');
+
+}
+
