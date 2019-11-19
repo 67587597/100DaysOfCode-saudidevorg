@@ -1382,5 +1382,11 @@ document.write(x + ',' + y + ',' + z);
 //Day 81 + Day 82
 
 //Get top most element at specific coordinator
-var el = document.elementFromPoint(10,10); //Answer <h2 id="1">1</h2>
-console.log(el);
+//var el = document.elementFromPoint(10,10); //Answer <h2 id="1">1</h2>
+//console.log(el);
+
+
+//Day 83
+function welcome(){
+    alert('hello');
+}
