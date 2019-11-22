@@ -1404,5 +1404,14 @@ document.write(x + ',' + y + ',' + z);
 //Day 85
 //$('.touchedDiv').bind('touchend', function() {
 //  alert('touched !"');});
-document.getElementById ("touchedDiv").addEventListener('touchend', function() {
-  alert('touched !');})
+//document.getElementById ("touchedDiv").addEventListener('touchend', function() {
+//  alert('touched !');})
+
+//Day 86
+var div = document.getElementById("ClickedDiv");
+div.addEventListener('click', clickText);
+ function clickText(){
+  div.innerHTML ='Clicking !';  
+  setTimeout(function() {div.innerHTML = 'clicked !'}, 2000);
+  div.removeEventListener('click', clickText);
+};
