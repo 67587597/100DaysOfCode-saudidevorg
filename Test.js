@@ -1408,10 +1408,17 @@ document.write(x + ',' + y + ',' + z);
 //  alert('touched !');})
 
 //Day 86
-var div = document.getElementById("ClickedDiv");
-div.addEventListener('click', clickText);
- function clickText(){
-  div.innerHTML ='Clicking !';  
-  setTimeout(function() {div.innerHTML = 'clicked !'}, 2000);
-  div.removeEventListener('click', clickText);
-};
+//var div = document.getElementById("ClickedDiv");
+//div.addEventListener('click', clickText);
+// function clickText(){
+//  div.innerHTML ='Clicking !';  
+//  setTimeout(function() {div.innerHTML = 'clicked !'}, 2000);
+//  div.removeEventListener('click', clickText);
+//};
+
+//Day 87
+var cb = document.getElementById("myCheckbox");
+cb.addEventListener('click', function(event){
+ event.preventDefault();
+});
+
