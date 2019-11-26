@@ -1417,8 +1417,19 @@ document.write(x + ',' + y + ',' + z);
 //};
 
 //Day 87
-var cb = document.getElementById("myCheckbox");
-cb.addEventListener('click', function(event){
- event.preventDefault();
-});
+//var cb = document.getElementById("myCheckbox");
+//cb.addEventListener('click', function(event){
+// event.preventDefault();
+//});
+//
+
+//Day 88 + Day 89
+function mousedown(){
+ console.log('mouse down');
+}
+
+function mouseup(){
+ console.log('mouse up');
+
+}
 
