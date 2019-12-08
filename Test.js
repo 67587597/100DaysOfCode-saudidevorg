@@ -1454,14 +1454,36 @@ document.write(x + ',' + y + ',' + z);
 //}
 
 //Day 92
-console.log(navigator.appName);
-console.log(navigator.appVersion);
-console.log(navigator.language);
-console.log(navigator.vendor);
-console.log(navigator.appCodeName);
-console.log(navigator.cookieEnabled);
-console.log(navigator.platform);
-console.log(navigator.product);
+//console.log(navigator.appName);
+//console.log(navigator.appVersion);
+//console.log(navigator.language);
+//console.log(navigator.vendor);
+//console.log(navigator.appCodeName);
+//console.log(navigator.cookieEnabled);
+//console.log(navigator.platform);
+//console.log(navigator.product);
+//console.log(navigator.onLine);
+
+//Day 93
+function timer()
+{
+    alert('3 seconds later');
+}
+
+
+var t = setInterval(timer2, 1000);
+let x = 0
+
+function timer2()
+{
+ x = x+1;
+ document.getElementById('intervalValue').innerHTML = x;
+    if(x >= 5)
+        clearInterval(t);
+}
+
+
+
 
 
 
