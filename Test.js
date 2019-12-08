@@ -1445,10 +1445,27 @@ document.write(x + ',' + y + ',' + z);
 //    console.log(value +'='+ key);
 
 //Day 91
-function goForward(){
-    window.history.forward();
-}
+//function goForward(){
+//    window.history.forward();
+//}
+//
+//function goBack(){
+//    window.history.back();
+//}
 
-function goBack(){
-    window.history.back();
-}
+//Day 92
+console.log(navigator.appName);
+console.log(navigator.appVersion);
+console.log(navigator.language);
+console.log(navigator.vendor);
+console.log(navigator.appCodeName);
+console.log(navigator.cookieEnabled);
+console.log(navigator.platform);
+console.log(navigator.product);
+
+
+
+
+
+
+
