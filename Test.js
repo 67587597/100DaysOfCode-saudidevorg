@@ -1434,12 +1434,21 @@ document.write(x + ',' + y + ',' + z);
 //}
 
 //Day 90
-console.log(window.location.href);
-var url = new URL("https://example.com/?name=Jonathan%20Smith&age=18");
-console.log(url.host);
+//console.log(window.location.href);
+//var url = new URL("https://example.com/?name=Jonathan%20Smith&age=18");
+//console.log(url.host);
+//
+//var params = (url).searchParams;
+//
+//
+//for ([value,key] of  params)
+//    console.log(value +'='+ key);
 
-var params = (url).searchParams;
+//Day 91
+function goForward(){
+    window.history.forward();
+}
 
-
-for ([value,key] of  params)
-    console.log(value +'='+ key);
+function goBack(){
+    window.history.back();
+}
