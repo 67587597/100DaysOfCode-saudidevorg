@@ -1424,12 +1424,22 @@ document.write(x + ',' + y + ',' + z);
 //
 
 //Day 88 + Day 89
-function mousedown(){
- console.log('mouse down');
-}
+//function mousedown(){
+// console.log('mouse down');
+//}
+//
+//function mouseup(){
+// console.log('mouse up');
+//
+//}
 
-function mouseup(){
- console.log('mouse up');
+//Day 90
+console.log(window.location.href);
+var url = new URL("https://example.com/?name=Jonathan%20Smith&age=18");
+console.log(url.host);
 
-}
+var params = (url).searchParams;
 
+
+for ([value,key] of  params)
+    console.log(value +'='+ key);
