@@ -1,9 +1,10 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<!--
     <link href="https://jqueryui.com/jquery-wp-content/themes/jquery/css/base.css" rel="stylesheet"/>
   
-<!--    <link href="http://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css" rel="stylesheet" />-->
+    <link href="http://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -11,15 +12,51 @@
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+-->
     
     
     <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
+        
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+        <div id="result"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter will continue to count
+        (is not reset).</p>
+        
+        
+        <div></div>
+        
+        <p><button onclick="clickCounterSession()" type="button">Click me!</button></p>
+        <div id="resultSession"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+        
+            <div></div>
+        
+        <p>Count numbers: <output id="Workerresult"></output></p>
+        <button onclick="startWorker()">Start Worker</button>
+        <button onclick="stopWorker()">Stop Worker</button>
+        <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web
+        Workers.</p>
+
+        
+        <h1>Getting server updates</h1>
+        <div id="ServerResult"></div>
+        
+        
+        <p>Click the button to get your coordinates.</p>
+        <button onclick="getLocation()">Try It</button>
+            <div id="demo"></div>
+
+        
+        <!--
         <input type="button" value= "setTimeout" onclick="setTimeout(timer, 3000);">
          <div id="intervalValue">
             <h1> </h1>
         </div>
+-->
 
         
 <!--

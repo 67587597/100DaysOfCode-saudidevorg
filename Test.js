@@ -1465,24 +1465,175 @@ document.write(x + ',' + y + ',' + z);
 //console.log(navigator.onLine);
 
 //Day 93
-function timer()
-{
-    alert('3 seconds later');
+//function timer()
+//{
+//    alert('3 seconds later');
+//}
+//
+//
+//var t = setInterval(timer2, 1000);
+//let x = 0
+//
+//function timer2()
+//{
+// x = x+1;
+// document.getElementById('intervalValue').innerHTML = x;
+//    if(x >= 5)
+//        clearInterval(t);
+//}
+
+//Day 94
+function setCookeie(name, value, exdays){
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 1000));
+    
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/"
 }
 
 
-var t = setInterval(timer2, 1000);
-let x = 0
+function getCookie(name) {
+    var name = name + "=";
+    var dc = decodeURIComponent(document.cookie);
+    var cookiesElements = []
+       cookiesElements = dc.split(';');
+//
+//cookiesElements.forEach(function(val, index) {
+//       while (val.charAt(0) == ' ') {
+//         val = val.substring(1);
+//         }
+//         if (val.indexOf(name) == 0) {
+//             return val.substring(name.length, val.length);
+//             }
+//    });
+    
+     for(var i = 0; i < cookiesElements.length; i++) {
+         var c = cookiesElements[i];
+         while (c.charAt(0) == ' ') {
+         c = c.substring(1);
+         }
 
-function timer2()
-{
- x = x+1;
- document.getElementById('intervalValue').innerHTML = x;
-    if(x >= 5)
-        clearInterval(t);
+         if (c.indexOf(name) == 0) {
+         return c.substring(name.length, c.length);
+         }
+         }
+
+    
+    return '';
+ 
 }
 
 
+function checkCookie() {
+ var user=getCookie("username");
+ if (user != "") {
+ alert("Welcome again " + user);
+ } else {
+ user = prompt("Please enter your name:","");
+ if (user != "" && user != null) {
+ setCookeie("username", user, 30);
+ }
+ }
+}
+
+checkCookie();
+
+//document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+
+//Day 95 + Day 96
+console.log(window.location.href);
+var url = new URL("https://example.com/?name=Jonathan%20Smith&age=18");
+console.log(url.host);
+
+var params = (url).searchParams;
+for ([value,key] of  params)
+    console.log(value +'='+ key);
+console.log('----------------');
+
+url.searchParams.append('major', "CS");
+
+var newparams = (url).searchParams;
+for ([value,key] of  newparams)
+    console.log(value +'='+ key);
+
+//Day 97
+
+function clickCounter() {
+ if (typeof(Storage) !== "undefined") {
+ if (localStorage.clickcount) {
+ localStorage.clickcount = Number(localStorage.clickcount)+1;
+ } else {
+ localStorage.clickcount = 1;
+ }
+ document.getElementById("result").innerHTML = "You have clicked the button " +
+localStorage.clickcount + " time(s).";
+ } else {
+ document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+ }
+}
+
+function clickCounterSession() {
+ if (typeof(Storage) !== "undefined") {
+ if (sessionStorage.clickcount) {
+ sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+ } else {
+ sessionStorage.clickcount = 1;
+ }
+ document.getElementById("resultSession").innerHTML = "You have clicked the button " +
+sessionStorage.clickcount + " time(s) in this session.";
+ } else {
+ document.getElementById("resultSession").innerHTML = "Sorry, your browser does not support web storage...";
+ }
+}
+
+
+//Day 98
+
+var w;
+function startWorker() {
+ if(typeof(Worker) !== "undefined") {
+ if(typeof(w) == "undefined") {
+ w = new Worker("demo_workers.js");
+ }
+ w.onmessage = function(event) {
+ document.getElementById("Workerresult").innerHTML = event.data;
+ };
+ } else {
+ document.getElementById("Workerresult").innerHTML = "Sorry, your browser does not support Web Workers...";
+ }
+}
+function stopWorker() {
+ w.terminate();
+ w = undefined;}
+
+
+
+
+//Day 99
+
+if(typeof(EventSource) !== "undefined") {
+ var source = new EventSource("demo_sse.php");
+ source.onmessage = function(event) {
+ document.getElementById("result").innerHTML += event.data + "<br>";
+ };
+} else {
+ document.getElementById("result").innerHTML = "Sorry, your browser does not support serversent events...";
+}
+
+//Day 100
+var x = document.getElementById("demo");
+function getLocation() {
+ if (navigator.geolocation) {
+ navigator.geolocation.getCurrentPosition(showPosition);
+ } else {
+ x.innerHTML = "Geolocation is not supported by this browser.";
+ }
+}
+function showPosition(position) {
+ x.innerHTML = "Latitude: " + position.coords.latitude +
+ "<br>Longitude: " + position.coords.longitude;
+}
 
 
 
